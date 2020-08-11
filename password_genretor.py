@@ -1,5 +1,4 @@
 #! /usr/bin/env python3
-#! /usr/share/application/IDLE(using python-3.8)
 
 from random import randint, choice, shuffle
 import string
@@ -38,7 +37,15 @@ password = ''.join(password)
 if special == 'n':
 	pass
 else:
-	password = password+special
+	pasword = password+special
 
-print(password)
+print("your password is ready\n",password)
+
+save = input("If you want save password in file\nEnter the 'Y'\n if not enter 'n' ")
+if save == "Y"or"y":
+	name = input('enter the file name-')
+	f = open(name,"x+")
+	f.write(password)
+	f.close() 
+	print('Done')
 input()
