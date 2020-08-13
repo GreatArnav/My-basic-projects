@@ -60,6 +60,7 @@ else:
 			else:
 				password = password+special
 				break
+				
 		except ValueError :
 			print('Invalid Input\n')
 			print('Try Again')
