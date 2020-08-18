@@ -7,6 +7,7 @@ import time
 print("Welcome to Arnav's password genretor")
 password = ""
 type = input('want random password? Y/n\n')
+# Random password creation
 if type == 'y' or type == 'Y':
 	while True:
 		try:
@@ -25,12 +26,11 @@ if type == 'y' or type == 'Y':
 			print('something went wrong',e)
 			continue
 
+# Creating password by number of character(by user)
 else:
 	while True:
 		try:
-			password = ""
 			# variable
-			
 			num = int(input('Enter the number of number in the pasword-'))
 			upper = int(input('Enter the number of upper case(capital letter) in password-'))
 			lower = int(input('Enter the number of lower case(small letter) in pasword-'))
@@ -40,6 +40,7 @@ else:
 				
 
 			# loop
+			# Creating password
 			for num2 in range(num):
 				r = randint(0,9)
 				r = str(r)
@@ -68,7 +69,7 @@ else:
 			print('something went wrong')
 			continue
 
-# Saving the password
+# Saving the password in file
 print("\nYour password is ready - ",password,"\n\n")
 time.sleep(2)
 if password != "":
